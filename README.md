@@ -71,6 +71,8 @@ Performing a calculation:
 - Input: `5 + 3`
 - Result: `8`
 
+## Image
+[image](https://github.com/Elabs-llc/PRODIGY_AD_01/blob/main/eCalcus.png)
 ## Conclusion
 
 This Calculator App is a straightforward and effective solution for performing basic arithmetic operations. It serves as an excellent example of using Flutter to develop cross-platform applications, showcasing its capability to unify the development process across mobile and web environments.
