@@ -14,9 +14,9 @@ class ElabsCalCus extends StatefulWidget {
 }
 
 class _ElabsCalCus extends State<ElabsCalCus> {
-  double firstNum = 0;
-  double secondNum = 0;
-  String history = '';
+  double firstNum = 0; // first
+  double secondNum = 0; // second
+  String history = ''; // history
   String txtToDisplay = '';
   String res = ''; //this is used to store intermediate result
   String operation = '';
@@ -147,7 +147,7 @@ class _ElabsCalCus extends State<ElabsCalCus> {
                   color: const Color.fromARGB(29, 68, 137, 255),
                   borderRadius: BorderRadius.circular(5),
                 ),
-                margin: EdgeInsets.all(10),
+                margin: const EdgeInsets.all(10),
                 child: Column(
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
@@ -193,188 +193,186 @@ class _ElabsCalCus extends State<ElabsCalCus> {
               ),
 
               // numbers ro pressed
-              Container(
-                child: Column(
-                  children: [
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CalcusButton(
-                          buttonNumber: 'AC',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF92c831,
-                          callback: () => onButtonClicked('AC'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '+/-',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFFf4d160,
-                          callback: () => onButtonClicked('neg'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '%',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFFf4d160,
-                          callback: () => onButtonClicked('%'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '÷',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFFf4d160,
-                          callback: () => onButtonClicked('÷'),
-                          textSize: 20,
-                        )
-                      ],
-                    ),
+              Column(
+                children: [
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CalcusButton(
+                        buttonNumber: 'AC',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF92c831,
+                        callback: () => onButtonClicked('AC'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '+/-',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFFf4d160,
+                        callback: () => onButtonClicked('neg'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '%',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFFf4d160,
+                        callback: () => onButtonClicked('%'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '÷',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFFf4d160,
+                        callback: () => onButtonClicked('÷'),
+                        textSize: 20,
+                      )
+                    ],
+                  ),
 
-                    // second row
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CalcusButton(
-                          buttonNumber: '9',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('9'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '8',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('8'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '7',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('7'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: 'x',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFFf4d160,
-                          callback: () => onButtonClicked('x'),
-                          textSize: 20,
-                        )
-                      ],
-                    ),
-                    // end second row
+                  // second row
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CalcusButton(
+                        buttonNumber: '9',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('9'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '8',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('8'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '7',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('7'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: 'x',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFFf4d160,
+                        callback: () => onButtonClicked('x'),
+                        textSize: 20,
+                      )
+                    ],
+                  ),
+                  // end second row
 
-                    // third row
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CalcusButton(
-                          buttonNumber: '6',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('6'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '5',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('5'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '4',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('4'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '-',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFFf4d160,
-                          callback: () => onButtonClicked('-'),
-                          textSize: 20,
-                        )
-                      ],
-                    ),
-                    // end third row
+                  // third row
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CalcusButton(
+                        buttonNumber: '6',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('6'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '5',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('5'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '4',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('4'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '-',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFFf4d160,
+                        callback: () => onButtonClicked('-'),
+                        textSize: 20,
+                      )
+                    ],
+                  ),
+                  // end third row
 
-                    //fourth row
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CalcusButton(
-                          buttonNumber: '3',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('3'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '2',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('2'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '1',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('1'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '+',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFFf4d160,
-                          callback: () => onButtonClicked('+'),
-                          textSize: 20,
-                        )
-                      ],
-                    ),
-                    // end fourth row
+                  //fourth row
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CalcusButton(
+                        buttonNumber: '3',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('3'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '2',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('2'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '1',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('1'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '+',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFFf4d160,
+                        callback: () => onButtonClicked('+'),
+                        textSize: 20,
+                      )
+                    ],
+                  ),
+                  // end fourth row
 
-                    // last row
-                    Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        CalcusButton(
-                          buttonNumber: '0',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('0'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '.',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFF8ac4d0,
-                          callback: () => onButtonClicked('.'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: 'C',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFFFFB266,
-                          callback: () => onButtonClicked('C'),
-                          textSize: 20,
-                        ),
-                        CalcusButton(
-                          buttonNumber: '=',
-                          textColor: 0xFF000000,
-                          fillColor: 0xFFf4d160,
-                          callback: () => onButtonClicked('='),
-                          textSize: 20,
-                        )
-                      ],
-                    ),
-                    // last row
-                  ],
-                ),
+                  // last row
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    children: [
+                      CalcusButton(
+                        buttonNumber: '0',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('0'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '.',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFF8ac4d0,
+                        callback: () => onButtonClicked('.'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: 'C',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFFFFB266,
+                        callback: () => onButtonClicked('C'),
+                        textSize: 20,
+                      ),
+                      CalcusButton(
+                        buttonNumber: '=',
+                        textColor: 0xFF000000,
+                        fillColor: 0xFFf4d160,
+                        callback: () => onButtonClicked('='),
+                        textSize: 20,
+                      )
+                    ],
+                  ),
+                  // last row
+                ],
               ),
             ],
           ),
