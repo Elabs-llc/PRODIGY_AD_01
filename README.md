@@ -29,7 +29,7 @@ This Calculator App is a versatile mobile and web application built using Flutte
 ### Clone the Repository
 
 ```bash
-Git clone [https://github.com/Elabs-llc/PRODIGY_AD_01](https://github.com/Elabs-llc/PRODIGY_AD_01)
+Git clone [REPOSITORY_URL](https://github.com/Elabs-llc/PRODIGY_AD_01)
 Cd calculator_app
 ```
 
